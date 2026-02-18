@@ -6,7 +6,7 @@
 ![React](https://img.shields.io/badge/React-20232A?logo=react)
 ![Microsoft Entra ID](https://img.shields.io/badge/Microsoft%20Entra%20ID-0078D4?logo=microsoft&logoColor=white)
 
-A **secure, containerized lookup service** that**.  
+A **secure, containerized lookup service**.  
 It exposes a **React UI** and a **FastAPI backend**, deployed to **Azure Container Apps**, with optional **Microsoft Entra ID** authentication.  
 The recommended enterprise deployment uses **single-origin routing** (no browser CORS) and an **internal-only API**.  
 References: Azure Container Apps `up` command and supported flows (local source / GitHub) are documented by Microsoft Learn. [1](https://stackoverflow.com/questions/66416550/starlette-cors-exclude-endpoint)
@@ -17,7 +17,7 @@ References: Azure Container Apps `up` command and supported flows (local source 
 
 - Accepts a user-provided **search term**
 - Retrieves matching entries from a **reference dataset**
-- Returns a list of `{ source_term, reference_code, reference_label }`
+- Returns a list of `{ source_term, reference_code, reference_label }` for this demo
 - Provides a clean UI for search and result selection
 
 > This project demonstrates a **generic lookup/search pattern** that applies to many catalogs (terminology catalogs, product master data, internal code sets, etc.).
