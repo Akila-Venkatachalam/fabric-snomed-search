@@ -65,8 +65,8 @@ export default function App() {
     <div className="page">
       <header className="header">
         <div>
-          <h2>Fabric SNOMED Search</h2>
-          <div className="sub">Type a homegrown procedure name to retrieve SNOMED code + standard name</div>
+          <h2>Secure Fabric Lookup Service</h2>
+          <div className="sub">Search and retrieve reference entries from Microsoft Fabric</div>
         </div>
       </header>
 
@@ -74,7 +74,6 @@ export default function App() {
         <input
           className="searchInput"
           type="text"
-          placeholder="e.g., COLONOSCOPY, BIOPSY, DENTURE..."
           value={query}
           onChange={(e) => setQuery(e.target.value)}
         />
@@ -97,7 +96,7 @@ export default function App() {
               >
                 <div className="rowTitle">{r.homegrown_name}</div>
                 <div className="rowMeta">
-                  <span className="pill">SNOMED: {r.snomed_code}</span>
+                  <span className="pill">Reference: {r.snomed_code}</span>
                   <span className="pill score">Score: {r.score.toFixed(2)}</span>
                 </div>
               </button>
@@ -111,10 +110,10 @@ export default function App() {
             <div className="empty">Select a result to view details.</div>
           ) : (
             <div className="card">
-              <div className="label">Homegrown name</div>
+              <div className="label">Search Term</div>
               <div className="value">{selected.homegrown_name}</div>
 
-              <div className="label">SNOMED code</div>
+              <div className="label">Reference code</div>
               <div className="value mono">
                 {selected.snomed_code}{" "}
                 <button className="copyBtn" onClick={() => navigator.clipboard.writeText(selected.snomed_code)}>
@@ -122,7 +121,7 @@ export default function App() {
                 </button>
               </div>
 
-              <div className="label">SNOMED standard name</div>
+              <div className="label">Reference Label</div>
               <div className="value">{selected.snomed_name}</div>
             </div>
           )}
