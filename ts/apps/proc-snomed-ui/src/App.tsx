@@ -65,7 +65,7 @@ export default function App() {
     <div className="page">
       <header className="header">
         <div>
-          <h2>Procedure → SNOMED Search</h2>
+          <h2>Fabric SNOMED Search</h2>
           <div className="sub">Type a homegrown procedure name to retrieve SNOMED code + standard name</div>
         </div>
       </header>
