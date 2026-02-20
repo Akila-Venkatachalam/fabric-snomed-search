@@ -1,4 +1,4 @@
-# secure-fabric-lookup-service
+# secure-lookup-service
 
 ![Microsoft Fabric](https://img.shields.io/badge/Microsoft%20Fabric-0078D4?logo=microsoft&logoColor=white)
 ![Azure Container Apps](https://img.shields.io/badge/Azure%20Container%20Apps-0078D4?logo=microsoftazure&logoColor=white)
